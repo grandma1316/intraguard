@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notifications</title>
+  <link rel="stylesheet" href="golive.css" />
+  <style>
+    .main-content {
+      margin-left: 220px;
+      padding: 20px;
+    }
+    .notif-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .notif-item {
+      background: #1e1e1e;
+      padding: 16px;
+      border-radius: 8px;
+      position: relative;
+      border-left: 4px solid #ff4d4d;
+      color: #fff;
+    }
+    .notif-item.unread::before {
+      content: "";
+      position: absolute;
+      top: 16px; left: 8px;
+      width: 8px; height: 8px;
+      background: #ff4d4d;
+      border-radius: 50%;
+    }
+    .notif-item h3 {
+      margin: 0 0 4px;
+      font-size: 1.1rem;
+    }
+    .notif-item p {
+      margin: 0 0 8px;
+      font-size: 0.95rem;
+    }
+    .notif-item time {
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <a href="/index.html" class="home-btn">Logout</a>
+  <div class="sidebar">
+    <div class="integraGuard">IntegraGuard</div>
+    <div class="sidebar-logo">
+      <img src="../assets/icons/logo.png" alt="IntegraGuard Logo" />
+    </div>
+    <ul>
+      <li><a href="./dashboard.html">Dashboard</a></li>
+      <li><a href="./usermanagement.html">Profile</a></li>
+      <li><a href="./golive.html">Go Live</a></li>
+      <li class="active"><a href="./notification.html">Notifications</a></li>
+      <li><a href="./contact.html">Contact Support</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content" style="margin-top: 30px;">
+    <h2 style="color: white;">Notifications</h2>
+    <div id="notifList" class="notif-list" style="margin-top: 15px;">
+      <!-- Notifications will be injected here -->
+    </div>
+  </div>
+
+
+</body>
+
+<script type="module" src="notification.js"></script>
+</html>

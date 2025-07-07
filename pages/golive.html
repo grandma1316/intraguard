@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Go Live</title>
+  <link rel="stylesheet" href="golive.css" />
+</head>
+<body>
+  <a href="../index.html" class="home-btn">Logout</a>
+  <div class="sidebar">
+    <div class="integraGuard">IntegraGuard</div>
+    <div class="sidebar-logo">
+      <img src="../assets/icons/logo.png" alt="IntegraGuard Logo" />
+    </div>
+    <ul>
+      <li><a href="./dashboard.html">Dashboard</a></li>
+      <li><a href="../pages/usermanagement.html">Profile</a></li>
+      <li class="active"><a href="golive.html">Go Live</a></li>
+      <li><a href="../pages/notification.html">Notification</a></li>
+      <li><a href="../pages/contact.html">Contact Support</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="top-bar">
+        <button class="add-camera-btn">Add a Camera</button>
+      <div class="icons"></div>
+    </div>
+
+    <!-- Cards container must be inside main-content -->
+    <div class="cards"></div>
+  </div>
+
+  <!-- Camera Modal (stays where it is) -->
+  <div id="cameraModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2>Add New Camera</h2>
+      <form id="cameraForm">
+        <label for="cameraName">Camera Name:</label>
+        <input type="text" id="cameraName" name="cameraName" required/>
+
+        <label for="webcamSelect">Select Webcam:</label>
+        <select id="webcamSelect" name="webcamSelect" required>
+          <option value="">Loading webcams...</option>
+        </select>
+
+        <button type="submit">Add Camera</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="golive.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-decoration: none;
+        }
+        
+        body {
+            display: flex;
+            background-color: #121212;
+        }
+
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: #1e1e1e;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        .sidebar-logo {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .sidebar-logo img {
+            max-width: 100px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            padding: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        li:hover, .active {
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        .integraGuard {
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ff4d4d;
+            text-shadow: 0 0 10px rgba(255, 77, 77, 0.8);
+            text-align: center;
+            display: block;
+            padding: 10px;
+        }
+
+        .main-content {
+            margin-left: 220px;
+            padding: 20px;
+            width: calc(100% - 220px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contact-container {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 15px;
+            width: 400px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .contact-container h2 {
+            color: #ff4d4d;
+            margin-bottom: 15px;
+        }
+
+        .contact-container p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .contact-container a {
+            color: #ff4d4d;
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .contact-container a:hover {
+            color: #e60000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="integraGuard">IntegraGuard</div>
+        <div class="sidebar-logo">
+            <img src="../assets/icons/logo.png" alt="IntegraGuard Logo">
+        </div>
+        <br>
+        
+        <ul>
+            <li><a href="../pages/dashboard.html">Dashboard</a></li>
+            <li><a href="../pages/usermanagement.html">Profile</a></li>
+            <li><a href="../pages/golive.html">Go Live</a></li>
+            <li><a href="./notification.html">Notification</a></li>
+            <li class="active"><a href="../pages/contact.html">Contact Support</a></li>
+        </ul>
+    </div>
+
+    <!-- Contact Support Section -->
+    <div class="main-content">
+        <div class="contact-container">
+            <h2>Need Help?</h2>
+            <p>If you're facing any issues or have questions, feel free to reach out to us. We are here to help!</p>
+            <p><strong>Support Email:</strong></p>
+            <a href="mailto:nidahussain0421@gmail.com">nidahussain0421@gmail.com</a>
+        </div>
+    </div>
+</body>
+</html>

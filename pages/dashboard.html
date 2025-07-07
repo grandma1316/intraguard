@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:Georgia, serif; color:white; text-decoration:none; }
+    body { display:flex; background:#121212; }
+    .sidebar {
+      width: 200px;
+      height: 100vh;
+      background: #1e1e1e;
+      padding: 20px;
+      position: fixed;
+      top: 0; left: 0;
+    }
+    .sidebar .integraGuard {
+      font-size: 18px;
+      font-weight: bold;
+      color: #ff4d4d;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .sidebar-logo { display:flex; justify-content:center; margin:10px 0; }
+    .sidebar-logo img { max-width:100px; border-radius:10px; }
+    .sidebar ul { list-style:none; }
+    .sidebar li { margin:10px 0; }
+    .sidebar a { color:#ccc; }
+    .sidebar a.active, .sidebar a:hover { color:white; }
+    .main-content {
+      margin-left:220px;
+      padding:20px;
+      width: calc(100% - 220px);
+      margin-top: 40px;
+    }
+    .home-btn {
+      position:absolute; top:20px; right:20px;
+      background:transparent; color:cyan;
+      padding:8px 15px; border:2px solid cyan; border-radius:5px;
+      cursor:pointer;
+    }
+    .welcome-user {
+      margin-bottom:20px;
+      font-size:24px;
+      color:#ff4d4d;
+    }
+    .cards {
+      display:flex; gap:35px;
+    }
+    .card {
+      padding:30px; border-radius:35px; width:200px;
+      background:#3a7bd5; text-align:center; transition:transform .3s;
+    }
+    .card:hover { transform:translateY(-5px); cursor:pointer; }
+    .card a { color:white; font-weight:bold; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <button class="home-btn"><a href="../index.html">Logout</a></button>
+
+  <div class="sidebar">
+    <div class="sidebar-logo" style="flex-direction:column; align-items:center; gap:4px; margin-bottom:16px;">
+      <img src="../assets/icons/logo.png" alt="IntegraGuard Logo" style="max-width:80px; border-radius:10px; background:#222; padding:4px;" onerror="this.style.display='none'">
+      <span style="font-size:20px; font-weight:bold; color:#00bfff; letter-spacing:1px;">IntegraGuard</span>
+    </div>
+    <ul>
+      <li><a href="dashboard.html" class="active">Dashboard</a></li>
+      <li><a href="usermanagement.html">Profile</a></li>
+      <li><a href="golive.html">Go Live</a></li>
+      <li><a href="notification.html">Notification</a></li>
+      <li><a href="contact.html">Contact Support</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <h2 class="welcome-user"></h2>
+    <div class="cards">
+      <div class="card"><a href="golive.html">Go Live</a></div>
+      <div class="card"><a href="usermanagement.html">Previous Incidents</a></div>
+      <div class="card"><a href="notification.html">Recent Notifications</a></div>
+
+    </div>
+  </div>
+
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>

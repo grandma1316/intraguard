@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      @keyframes neonGlow {
+        0% {
+          text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+        }
+        50% {
+          text-shadow: 0 0 10px #ff3b3b, 0 0 20px #ff3b3b, 0 0 40px #ff3b3b;
+        }
+        100% {
+          text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+        }
+      }
+
+      @keyframes flicker {
+        0% {
+          opacity: 0.9;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.9;
+        }
+      }
+
+      .home-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        color: cyan;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 8px 15px;
+        border: 2px solid cyan;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      .home-btn:hover {
+        background: cyan;
+        color: black;
+        box-shadow: 0 0 10px cyan, 0 0 20px cyan;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #0a0a0a;
+        color: #fff;
+      }
+
+      .container {
+        display: flex;
+        width: 80%;
+        max-width: 900px;
+        background: #111;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+      }
+
+      .left {
+        flex: 1;
+        padding: 40px;
+      }
+
+      .right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .animated-heading {
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 15px;
+        animation: flicker 1.5s infinite alternate;
+      }
+
+      .animated-heading span:first-child {
+        color: rgb(255, 255, 255);
+        animation: neonGlow 1.5s infinite alternate;
+      }
+
+      .animated-heading span:last-child {
+        color: cyan;
+        text-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 20px cyan;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #333;
+        background: #222;
+        color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+      }
+
+      input::placeholder {
+        color: #aaa;
+      }
+
+      .login-btn {
+        background-color: rgba(255, 0, 0, 0.281);
+        color: white;
+        padding: 12px;
+        width: 50%;
+        display: block;
+        margin: 20px auto;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        text-shadow: 0 0 5px white;
+        box-shadow: 0 0 10px red, 0 0 20px red;
+        transition: 0.3s;
+      }
+
+      .login-btn:hover {
+        background-color: #ff3b3b;
+        box-shadow: 0 0 15px #ff3b3b, 0 0 30px #ff3b3b;
+      }
+
+      .social-login {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      .social-login img {
+        width: 30px;
+        cursor: pointer;
+        filter: drop-shadow(0 0 5px white);
+      }
+    </style>
+    <!-- <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js"></script> -->
+  </head>
+  <body>
+    <a href="../index.html" class="home-btn">Home</a>
+
+    <div class="container">
+      <div class="left">
+        <h1 class="animated-heading">
+          <span>IntegraGuard</span> <span>Surveillance System</span>
+        </h1>
+        <h2>Welcome</h2>
+        <p>
+          Get back to what you have left. IntegraGuard Surveillance System
+          Detect Weapon
+        </p>
+        <input type="email" placeholder="Email" id="email" />
+        <input type="password" placeholder="Password" id="password"/>
+        <button class="login-btn" onclick="login()">Login</button>
+      </div>
+      <div class="right">
+        <img src="../assets/icons/logo.png" alt="IntegraGuard Logo">
+      </div>
+    </div>
+
+    <!-- <s>
+      
+
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+
+      function login() {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        auth
+          .signInWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            alert("Login successful");
+            window.location.href = "dashboard.html";
+          })
+          .catch((error) => {
+            alert(error.message);
+          });
+      } -->
+    
+  </body>
+  <script type="module" src="login.js"></script>
+</html>

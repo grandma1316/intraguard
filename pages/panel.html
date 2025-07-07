@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage Users</title>
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+
+  <div class="main-content">
+    <h2>Add User</h2>
+    <input type="text"    id="add-name"     placeholder="Enter Name">
+    <input type="email"   id="add-email"    placeholder="Enter Email">
+    <input type="password" id="add-password" placeholder="Enter Password"><br><br>
+    <input type="text"    id="add-city"     placeholder="Enter City">
+    <button onclick="addUser()">Add User</button>
+    <br><br>
+
+    <h2>Authenticated Users</h2>
+    <table id="user-table" style="display: none;">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>City</th>
+          <th style="width:180px;">Action</th>
+        </tr>
+      </thead>
+      <tbody id="user-table-body">
+        <!-- rows injected here -->
+      </tbody>
+    </table>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <script type="module" src="panel.js"></script>
+</body>
+</html>

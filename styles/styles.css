@@ -1,0 +1,118 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #f0f0f0;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sidebar a.active {
+    background: #ccc;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Search Bar */
+.search-bar {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Header */
+.header {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Welcome Text */
+.welcome-text {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Info Boxes */
+.info-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.info-box {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    text-align: center;
+}
+
+.info-box strong {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Help Section */
+.help-section {
+    margin-top: 20px;
+    padding: 15px;
+    background: #eef;
+    border-left: 5px solid #00f;
+    border-radius: 5px;
+}
+
+.help-section a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Live Feed */
+.live-feed {
+    margin-top: 20px;
+}
+
+.live-feed ul {
+    list-style: none;
+    padding: 0;
+}
+
+.live-feed li {
+    background: #f8f8f8;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Profile</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Georgia, serif;
+      color: white;
+      text-decoration: none;
+    }
+    body {
+      display: flex;
+      background: #121212;
+      min-height: 100vh;
+    }
+    .sidebar {
+      width: 200px;
+      background: #1e1e1e;
+      padding: 20px;
+      position: fixed;
+      top: 0; left: 0;
+      height: 100vh;
+    }
+    .sidebar .integraGuard {
+      font-size: 18px;
+      font-weight: bold;
+      color: #ff4d4d;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .sidebar-logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .sidebar-logo img {
+      max-width: 100px;
+      border-radius: 10px;
+    }
+    .sidebar ul { list-style: none; }
+    .sidebar li { margin: 10px 0; }
+    .sidebar a {
+      color: #ccc;
+      display: block;
+      padding: 8px;
+      border-radius: 4px;
+    }
+    .sidebar a.active,
+    .sidebar a:hover { background: #333; color: #fff; }
+
+    .main-content {
+      margin-left: 220px;
+      padding: 40px 20px;
+      width: calc(100% - 220px);
+      overflow-y: auto;
+    }
+    section {
+      margin-bottom: 60px;
+    }
+    section h2 {
+      color: #ff4d4d;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 10px;
+    }
+
+    .profile-fields label {
+      display: block;
+      margin: 15px 0 5px;
+      font-size: 14px;
+      color: #ccc;
+    }
+    .profile-fields input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #333;
+      color: #fff;
+    }
+    .section-btn {
+      margin-top: 25px;
+      padding: 10px 20px;
+      background: #ff4d4d;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .section-btn:hover {
+      background: #e60000;
+    }
+
+    .detections table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: #1e1e1e;
+    }
+    .detections th,
+    .detections td {
+      padding: 12px;
+      border: 1px solid #333;
+    }
+    .detections th {
+      background: #2a2a2a;
+      text-align: left;
+    }
+    .no-data {
+      margin-top: 20px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="integraGuard">IntegraGuard</div>
+    <div class="sidebar-logo">
+      <img src="../assets/icons/logo.png" alt="Logo" />
+    </div>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a class="active" href="usermanagement.html">Profile</a></li>
+      <li><a href="golive.html">Go Live</a></li>
+      <li><a href="notification.html">Notification</a></li>
+      <li><a href="contact.html">Contact Support</a></li>
+      <li><a href="index.html">Logout</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <!-- —————————— My Profile Section —————————— -->
+    <section id="profileSection">
+      <h2>My Profile</h2>
+      <div class="profile-fields">
+        <label for="name">Full Name</label>
+        <input id="name" type="text" readonly />
+
+        <label for="email">Email</label>
+        <input id="email" type="email" readonly />
+
+        <label for="city">City</label>
+        <input id="city" type="text" readonly />
+      </div>
+    </section>
+
+    <!-- ———————— My Detections Section ———————— -->
+    <section id="detectionsSection" class="detections">
+      <h2>My Detections</h2>
+      <table id="detection-list">
+        <thead>
+          <tr><th>Timestamp</th><th>Object</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div id="noDetections" class="no-data" style="display:none;">
+        No detections yet.
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="detections.js"></script>
+
+</body>
+</html>

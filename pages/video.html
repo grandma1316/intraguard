@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YOLOv8 Live Stream</title>
+  <link rel="stylesheet" href="video.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="integraGuard">IntegraGuard</div>
+        <div class="sidebar-logo">
+          <img src="../assets/icons/logo.png" alt="IntegraGuard Logo" />
+        </div>
+        <ul>
+          <li><a href="./dashboard.html">Dashboard</a></li>
+          <li><a href="../pages/usermanagement.html">Profile</a></li>
+          <li class="active"><a href="golive.html">Go Live</a></li>
+          <li><a href="../pages/notification.html">Notification</a></li>
+          <li><a href="../pages/contact.html">Contact Support</a></li>
+        </ul>
+      </div>
+  <div class="main-content">
+    <a href="./golive.html" class="back-button" id="backButton">← Back to Go Live</a>
+    <div class="video-container">
+      <!-- NOTE: we leave the src blank for now and fill it in once we know the UID -->
+      <img id="liveFeed" alt="Live Video Feed">
+    </div>
+  </div>
+
+
+</body>
+<script type="module" src="video.js"></script>
+</html>
